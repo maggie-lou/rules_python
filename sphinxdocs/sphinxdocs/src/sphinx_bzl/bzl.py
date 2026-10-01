@@ -1472,7 +1472,7 @@ class _BzlIndex(domains.Index):
 
         # sort the list of objects in alphabetical order
         objects = self.domain.data["objects"].values()
-        objects = sorted(objects, key=lambda obj: obj.index_entry.name)
+        objects = sorted(objects, key=lambda obj: (obj.index_entry.name, obj.full_id))
 
         # Group by first letter
         for entry in objects:

@@ -33,6 +33,9 @@ extensions = [
     "sphinx_reredirects",
 ]
 
+# Don't write timing diagnostics to the output. They will still be written to the build log
+duration_write_json = None
+
 autodoc2_packages = [
     "sphinx_bzl",
     "runfiles",
